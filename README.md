@@ -8,4 +8,4 @@
 ### 2. Querying DOM using vanilla JS
 ### 3. Manipulating DOM with JS
 ### 4. Querying DOM using jQuery
-### 5. Manipualting DOM with jQuery
+### 5. Manipulating DOM with jQuery
