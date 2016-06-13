@@ -76,6 +76,29 @@ Demo: http://www.webpackbin.com/EJqSBuPEZ
 
 # 4. Manipulating DOM with JS
 
+What do we *want* to change? What *can* we change?
+
+Almost *everything*. DOM Properties, HTML Attributes, you name it!
+
+Wait, what's that? Property vs Attribute? Read more about it [here][12]
+
+You want to add a class? Sure `node.classList.add( 'foo' )`
+You want to remove a class? No problem. `node.classList.remove( 'foo' )`
+You want to toggle a class? Okay. `node.classList.toggle( 'foo' )`
+You want to check if a class exist? Hmm.. `node.classList.contains( 'foo' )`
+You want the whole list of class in string? well.. `node.className`
+You want it in an array? `node.classList` ( It's array-like )
+
+Wait, what's the element's ID? `node.id`
+
+It's an input field? What's the value? `node.value`
+
+How do I get data from that `data-foo="bar"` thingy? Ah.. `node.dataset.foo`
+
+How bout that random attribute `animal="dog"`? No worries `node.getAttribute( 'animal' )`
+
+Can I change the styling directly without using a class? Sure `node.style.width = '100px'`
+
 ---
 
 # 5. Querying DOM using jQuery
@@ -97,3 +120,4 @@ Demo: http://www.webpackbin.com/EJqSBuPEZ
 [9]: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName
 [10]: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName
 [11]: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagNameNS
+[12]: http://lucybain.com/blog/2014/attribute-vs-property/
