@@ -67,6 +67,52 @@
 					<!-- .element: class="fragment fade-in" data-fragment-index="4" -->
 					</script>
 				</section>
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							## Selectors
+
+							We use it to `select` or `find` elements in the DOM tree.
+
+							What can we use to find elements?
+							<!-- .element: class="fragment fade-up" data-fragment-index="1" -->
+
+							- ID
+							<!-- .element: class="fragment fade-up" data-fragment-index="2" -->
+							- Class
+							<!-- .element: class="fragment fade-up" data-fragment-index="3" -->
+							- Attributes
+							<!-- .element: class="fragment fade-up" data-fragment-index="4" -->
+							- Relationships
+							<!-- .element: class="fragment fade-up" data-fragment-index="5" -->
+						</script>
+					</section>
+					<section>
+						<h2>Using ID...</h2>
+						<button id="foo">I am a button</button>
+						<pre><code data-trim data-noescape>
+const button = document.getElementById( 'foo' );
+
+button.addEventListener( 'click', function( e ) {
+	console.log( 'You clicked button with id', e.target.id );
+});
+						</code></pre>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Selectors
+
+
+What other things can you find?
+
+| Selector | Selects |
+| `A E` | Any E element that is a `descendant` of an A element (that is: a child, or a child of a child, etc.) |
+| `A > E` | Any E element that is a `child` (i.e. direct descendant) of an A element |
+| `E:first-child` | Any E element that is the `first child` of its parent |
+| `B + E | Any E element that is the next `sibling` of a B element (that is: the next child of the same parent) |
+						</script>
+					</section>
+				</section>
 			</div>
 		</div>
 
