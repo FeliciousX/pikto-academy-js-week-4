@@ -33,6 +33,7 @@
 
   })();
 
+  // slide 4/1
   (function() {
     const btn_add_foo = document.querySelector( '#add_foo' );
     const btn_remove_foo = document.querySelector( '#remove_foo' );
