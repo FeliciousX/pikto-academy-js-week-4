@@ -37,16 +37,14 @@
 
 					1. DOM in a nutshell
 					<!-- .element: class="fragment fade-up" data-fragment-index="1" -->
-					2. Selectors
+					2. Querying DOM with vanilla JS
 					<!-- .element: class="fragment fade-up" data-fragment-index="2" -->
-					3. Querying DOM with vanilla JS
+					3. Manipulating DOM with vanilla JS
 					<!-- .element: class="fragment fade-up" data-fragment-index="3" -->
-					4. Manipulating DOM with vanilla JS
+					4. Querying DOM with jQuery
 					<!-- .element: class="fragment fade-up" data-fragment-index="4" -->
-					5. Querying DOM with jQuery
+					5. Manipulating DOM with jQuery
 					<!-- .element: class="fragment fade-up" data-fragment-index="5" -->
-					6. Manipulating DOM with jQuery
-					<!-- .element: class="fragment fade-up" data-fragment-index="6" -->
 					</script>
 				</section>
 				<section data-markdown>
@@ -70,48 +68,95 @@
 				<section>
 					<section data-markdown>
 						<script type="text/template">
-							## Selectors
+							## Querying DOM with vanilla JS
 
-							We use it to `select` or `find` elements in the DOM tree.
+							### Using Selectors!
 
-							What can we use to find elements?
 							<!-- .element: class="fragment fade-up" data-fragment-index="1" -->
 
-							- ID
+							We use it to *select* or *find* elements in the DOM tree.
+
+							<!-- .element: class="fragment fade-up" data-fragment-index="1" -->
+
+							What selectors can we use to find elements?
 							<!-- .element: class="fragment fade-up" data-fragment-index="2" -->
-							- Class
+
+							- ID
 							<!-- .element: class="fragment fade-up" data-fragment-index="3" -->
-							- Attributes
+							- Class
 							<!-- .element: class="fragment fade-up" data-fragment-index="4" -->
-							- Relationships
+							- Attributes
 							<!-- .element: class="fragment fade-up" data-fragment-index="5" -->
+							- Relationships
+							<!-- .element: class="fragment fade-up" data-fragment-index="6" -->
 						</script>
 					</section>
 					<section>
 						<h2>Using ID...</h2>
-						<button id="foo">I am a button</button>
+						<button id="foo">I am a unique button</button>
 						<pre><code data-trim data-noescape>
 const button = document.getElementById( 'foo' );
 
 button.addEventListener( 'click', function( e ) {
-	console.log( 'You clicked button with id', e.target.id );
+  console.log( 'Hey', e.currentTarget );
+});
+						</code></pre>
+					</section>
+					<section>
+						<h2>Using Class...</h2>
+						<button class="foo">I am a classy button</button>
+						<pre><code data-trim data-noescape>
+const button = document.querySelector( '.foo' );
+
+button.addEventListener( 'click', function( e ) {
+  console.log( 'Hey', e.currentTarget );
+});
+						</code></pre>
+					</section>
+					<section>
+						<h2>Using Attributes...</h2>
+						<input type="email" placeholder="I am an email input" />
+						<pre><code data-trim data-noescape>
+const input = document.querySelector( '[type="email"]' );
+
+input.addEventListener( 'change', function( e ) {
+  console.log( 'Your email is', e.target.value );
 });
 						</code></pre>
 					</section>
 					<section data-markdown>
 						<script type="text/template">
-							## Selectors
+							## Using Relationships...
 
+							Multiple ways of doing this:
 
-What other things can you find?
-
-| Selector | Selects |
-| `A E` | Any E element that is a `descendant` of an A element (that is: a child, or a child of a child, etc.) |
-| `A > E` | Any E element that is a `child` (i.e. direct descendant) of an A element |
-| `E:first-child` | Any E element that is the `first child` of its parent |
-| `B + E | Any E element that is the next `sibling` of a B element (that is: the next child of the same parent) |
+							1. Any descendant
+							2. Direct descendant
+							3. Siblings
+							4. There's more.. read up on it [here](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors)
 						</script>
 					</section>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						## Manipulating DOM with JS
+
+						What do we *want* to change? What *can* we change?
+
+						<!-- .element: class="fragment fade-up" data-fragment-index="1" -->
+
+						Almost *everything*.
+
+						<!-- .element: class="fragment fade-up" data-fragment-index="2" -->
+
+						DOM Properties, HTML Attributes, you name it!
+
+						<!-- .element: class="fragment fade-up" data-fragment-index="3" -->
+
+						Wait.. what's that? Property? Attribute? Read more about it [here](http://lucybain.com/blog/2014/attribute-vs-property/)
+
+						<!-- .element: class="fragment fade-up" data-fragment-index="4" -->
+					</script>
 				</section>
 			</div>
 		</div>
@@ -133,5 +178,6 @@ What other things can you find?
 				]
 			});
 		</script>
+		<script type="text/javascript" src="js/slides.js"></script>
 	</body>
 </html>
