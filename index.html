@@ -137,26 +137,54 @@ input.addEventListener( 'change', function( e ) {
 						</script>
 					</section>
 				</section>
-				<section data-markdown>
-					<script type="text/template">
-						## Manipulating DOM with JS
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							## Manipulating DOM with JS
 
-						What do we *want* to change? What *can* we change?
+							What do we *want* to change? What *can* we change?
 
-						<!-- .element: class="fragment fade-up" data-fragment-index="1" -->
+							<!-- .element: class="fragment fade-up" data-fragment-index="1" -->
 
-						Almost *everything*.
+							Almost *everything*.
 
-						<!-- .element: class="fragment fade-up" data-fragment-index="2" -->
+							<!-- .element: class="fragment fade-up" data-fragment-index="2" -->
 
-						DOM Properties, HTML Attributes, you name it!
+							DOM Properties, HTML Attributes, you name it!
 
-						<!-- .element: class="fragment fade-up" data-fragment-index="3" -->
+							<!-- .element: class="fragment fade-up" data-fragment-index="3" -->
 
-						Wait.. what's that? Property? Attribute? Read more about it [here](http://lucybain.com/blog/2014/attribute-vs-property/)
+							Wait.. what's that? Property? Attribute? Read more about it [here](http://lucybain.com/blog/2014/attribute-vs-property/)
 
-						<!-- .element: class="fragment fade-up" data-fragment-index="4" -->
-					</script>
+							<!-- .element: class="fragment fade-up" data-fragment-index="4" -->
+						</script>
+					</section>
+					<section>
+						<h2>Manipulating classes</h2>
+						<button id="add_foo">I add .foo</button>
+						<button id="remove_foo">I remove .foo</button>
+						<button id="toggle_foo">I toggle .foo</button>
+
+						<div id="custom" style="background-color: green;">Inspect me on the developer console!</div>
+						<pre><code data-trim data-noescape>
+const btn_add_foo = document.querySelector( '#add_foo' );
+const btn_remove_foo = document.querySelector( '#remove_foo' );
+const btn_toggle_foo = document.querySelector( '#toggle_foo' );
+const custom_block = document.getElementById( 'custom' );
+
+btn_add_foo.addEventListener( 'click', function( e ) {
+	custom_block.classList.add( 'foo' );
+});
+
+btn_remove_foo.addEventListener( 'click', function( e ) {
+	custom_block.classList.remove( 'foo' );
+});
+
+btn_toggle_foo.addEventListener( 'click', function( e ) {
+	custom_block.classList.toggle( 'foo' );
+});
+						</code></pre>
+					</section>
 				</section>
 			</div>
 		</div>

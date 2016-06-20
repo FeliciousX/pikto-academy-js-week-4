@@ -33,4 +33,23 @@
 
   })();
 
+  (function() {
+    const btn_add_foo = document.querySelector( '#add_foo' );
+    const btn_remove_foo = document.querySelector( '#remove_foo' );
+    const btn_toggle_foo = document.querySelector( '#toggle_foo' );
+    const custom_block = document.getElementById( 'custom' );
+
+    btn_add_foo.addEventListener( 'click', function( e ) {
+      custom_block.classList.add( 'foo' );
+    });
+
+    btn_remove_foo.addEventListener( 'click', function( e ) {
+      custom_block.classList.remove( 'foo' );
+    });
+
+    btn_toggle_foo.addEventListener( 'click', function( e ) {
+      custom_block.classList.toggle( 'foo' );
+    });
+  })();
+
 })();
