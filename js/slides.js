@@ -110,4 +110,23 @@
 
   })();
 
+  (function() {
+    const btn_show = $( '#show_bar' );
+    const btn_hide = $( '#hide_bar' );
+    const btn_toggle_bar = $( '#toggle_show_bar' );
+    const custom_block = $( '#bar_bar' );
+
+    btn_show.on( 'click', function( e ) {
+      custom_block.show();
+    });
+
+    btn_hide.on( 'click', function( e ) {
+      custom_block.hide();
+    });
+
+    btn_toggle_bar.on( 'click', function( e ) {
+      custom_block.toggle();
+    });
+  })();
+
 })();

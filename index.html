@@ -174,7 +174,7 @@ input.addEventListener( 'change', function( e ) {
 						<button id="remove_foo">I remove .foo</button>
 						<button id="toggle_foo">I toggle .foo</button>
 
-						<div id="custom" style="background-color: green;">Inspect me on the developer console!</div>
+						<div id="custom" style="background-color: blue;">Inspect me on the developer console!</div>
 						<pre><code data-trim data-noescape>
 const btn_add_foo = document.querySelector( '#add_foo' );
 const btn_remove_foo = document.querySelector( '#remove_foo' );
@@ -302,11 +302,11 @@ input.on( 'change', function( e ) {
 					</section>
 					<section>
 							<h2>Manipulating classes</h2>
-							<button id="add_bar">I add .foo</button>
-							<button id="remove_bar">I remove .foo</button>
-							<button id="toggle_bar">I toggle .foo</button>
+							<button id="add_bar">I add .bar</button>
+							<button id="remove_bar">I remove .bar</button>
+							<button id="toggle_bar">I toggle .bar</button>
 
-							<div id="custom_bar" style="background-color: green;">Inspect me on the developer console!</div>
+							<div id="custom_bar" style="background-color: blue;">Inspect me on the developer console!</div>
 							<pre><code data-trim data-noescape>
 const btn_add_bar = $( '#add_bar' );
 const btn_remove_bar = $( '#remove_bar' );
@@ -327,6 +327,36 @@ btn_toggle_bar.on( 'click', function( e ) {
 								</code></pre>
 
 						</section>
+					<section>
+							<h2>Manipulating DOM</h2>
+							<button id="show_bar">I show bar</button>
+							<button id="hide_bar">I hide bar</button>
+							<button id="toggle_show_bar">I toggle bar</button>
+
+							<div id="bar_bar" style="background-color: blue;">I am bar_bar!</div>
+							<pre><code data-trim data-noescape>
+const btn_show = $( '#show_bar' );
+const btn_hide = $( '#hide_bar' );
+const btn_toggle_bar = $( '#toggle_show_bar' );
+const custom_block = $( '#bar_bar' );
+
+btn_show.on( 'click', function( e ) {
+  custom_block.show();
+});
+
+btn_hide.on( 'click', function( e ) {
+  custom_block.hide();
+});
+
+btn_toggle_bar.on( 'click', function( e ) {
+  custom_block.toggle();
+});
+								</code></pre>
+
+						</section>
+					</section>
+					<section>
+						<h1>Q &amp; A</h1>
 					</section>
 				</div>
 			</div>
