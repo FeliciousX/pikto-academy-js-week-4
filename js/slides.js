@@ -53,4 +53,34 @@
     });
   })();
 
+  // slide 5/3
+  (function() {
+
+    const button = $( '#bar' );
+
+    button.on( 'click', function( e ) {
+      console.log( 'Hey', e.currentTarget );
+    });
+
+  })();
+
+  // slide 5/4
+  (function() {
+    const button = $( '.bar' );
+
+    button.on( 'click', function( e ) {
+      console.log( 'Hey', e.currentTarget );
+    });
+  })();
+
+  // slide 5/5
+  (function() {
+
+    const input = $( '[type="text"]' );
+
+    input.on( 'change', function( e ) {
+      console.log( 'Your text is', e.target.value );
+    });
+  })();
+
 })();
