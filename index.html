@@ -212,10 +212,45 @@ node.style.width = '100px'
 					<section>
 						<h2>Write less, do more.</h2>
 					</section>
+					<section>
+						<h2>Querying DOM using jQuery</h2>
+						<ul>
+							<li class="fragment fade-up" data-fragment-index="1">
+								Before you use jQuery, you need to know what are the pros and cons.
+							</li>
+							<li class="fragment fade-up" data-fragment-index="2">
+								As a Developer it's important to be aware of the choices you make and how does it impact you.
+							</li>
+							<li class="fragment fade-up" data-fragment-index="3">
+								Because for all you know, <a href="http://youmightnotneedjquery.com/">you might not need jQuery</a> at all :P
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Querying DOM using jQuery</h2>
+						<ul>
+							<li>the API mostly uses selectors</li>
+							<li>traversing and manipulating the DOM tree is easier</li>
+							<li>animations are easier</li>
+							<li>lots of built-in helpers</li>
+						</ul>
+						<p><a href="http://learn.jquery.com/performance/optimize-selectors/">Selector performance</a> is something to take note of.</p>
+						<p>Lets check out some code!</p>
+					</section>
+					<section>
+						<p>Using ID...</p>
+						<pre><code data-trim data-noescape>
+const button = $( '#bar' );
+
+button.on( 'click', function( e ) {
+	console.log( 'Hey', e.currentTarget );
+});
+						</code></pre>
+					</section>
 				</section>
 			</div>
 		</div>
-
+		<script src="http://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
