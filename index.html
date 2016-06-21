@@ -47,23 +47,32 @@
 					<!-- .element: class="fragment fade-up" data-fragment-index="5" -->
 					</script>
 				</section>
-				<section data-markdown>
-					<script type="text/template">
-					## DOM in a nutshell
+				<section>
+					<h2>DOM in a nutshell</h2>
 
-					- DOM stands for Document Object Model (DOM)
-					<!-- .element: class="fragment fade-up" data-fragment-index="1" -->
-					- It's a tree like structure.. which is why people call it DOM Nodes.
-					<!-- .element: class="fragment fade-up" data-fragment-index="2" -->
-					- It's a fully object-oriented representation of the web page.
-					<!-- .element: class="fragment fade-up" data-fragment-index="3" -->
-					- It can be modified with a scripting language such as JavaScript.
-					<!-- .element: class="fragment fade-up" data-fragment-index="4" -->
+					<ul>
+						<li class="fragment fade-up" data-fragment-index="1">
+							DOM stands for Document Object Model (DOM)
+						</li>
+						<li class="fragment fade-up" data-fragment-index="2">
+							It's a tree like structure.. which is why people call it DOM Nodes.
+						</li>
+						<li class="fragment fade-up" data-fragment-index="3">
+							It's a fully object-oriented representation of the web page.
+						</li>
+						<li class="fragment fade-up" data-fragment-index="4">
+							It can be modified with a scripting language such as JavaScript.
+						</li>
+					</ul>
 
-					#### References <!-- .element: class="fragment fade-in" data-fragment-index="4" -->
-					[Introduction to the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
-					<!-- .element: class="fragment fade-in" data-fragment-index="4" -->
-					</script>
+					<h4 class="fragment fade-in" data-fragment-index="4">
+						References
+					</h4>
+					<p class="fragment fade-in" data-fragment-index="4">
+						<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank">
+							Introduction to the DOM
+						</a>
+					</p>
 				</section>
 				<section>
 					<section data-markdown>
@@ -124,40 +133,40 @@ input.addEventListener( 'change', function( e ) {
 });
 						</code></pre>
 					</section>
-					<section data-markdown>
-						<script type="text/template">
-							## Using Relationships...
+					<section>
+						<h2>Using Relationships...</h2>
 
-							Multiple ways of doing this:
+						<p>Multiple ways of doing this:</p>
 
-							1. Any descendant
-							2. Direct descendant
-							3. Siblings
-							4. There's more.. read up on it [here](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors)
-						</script>
+						<ol>
+							<li>Any descendant</li>
+							<li>Direct descendant</li>
+							<li>Siblings</li>
+							<li>
+								There's more.. read up on it <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors" target="_blank">here</a>
+							</li>
+						</ol>
 					</section>
 				</section>
 				<section>
-					<section data-markdown>
-						<script type="text/template">
-							## Manipulating DOM with JS
+					<section>
+							<h2>Manipulating DOM with JS</h2>
 
-							What do we *want* to change? What *can* we change?
+							<p class="fragment fade-up" data-fragment-index="1">
+								What do we <i>want</i> to change? What <i>can</i> we change?
+							</p>
 
-							<!-- .element: class="fragment fade-up" data-fragment-index="1" -->
+							<p class="fragment fade-up" data-fragment-index="2">
+								Almost *everything*.
+							</p>
 
-							Almost *everything*.
+							<p class="fragment fade-up" data-fragment-index="3">
+								DOM Properties, HTML Attributes, you name it!
+							</p>
 
-							<!-- .element: class="fragment fade-up" data-fragment-index="2" -->
-
-							DOM Properties, HTML Attributes, you name it!
-
-							<!-- .element: class="fragment fade-up" data-fragment-index="3" -->
-
-							Wait.. what's that? Property? Attribute? Read more about it [here](http://lucybain.com/blog/2014/attribute-vs-property/)
-
-							<!-- .element: class="fragment fade-up" data-fragment-index="4" -->
-						</script>
+							<p class="fragment fade-up" data-fragment-index="4">
+							Wait.. what's that? Property? Attribute? Read more about it <a target="_blank" href="http://lucybain.com/blog/2014/attribute-vs-property/">here</a>
+							</p>
 					</section>
 					<section>
 						<h2>Manipulating classes</h2>
@@ -274,7 +283,7 @@ input.on( 'change', function( e ) {
 });
 						</code></pre>
 					</section>
-					<section data-markdown>
+					<section>
 						<script type="text/template">
 							## More stuff
 
