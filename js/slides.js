@@ -42,14 +42,17 @@
 
     btn_add_foo.addEventListener( 'click', function( e ) {
       custom_block.classList.add( 'foo' );
+      console.log( custom_block.classList );
     });
 
     btn_remove_foo.addEventListener( 'click', function( e ) {
       custom_block.classList.remove( 'foo' );
+      console.log( custom_block.classList );
     });
 
     btn_toggle_foo.addEventListener( 'click', function( e ) {
       custom_block.classList.toggle( 'foo' );
+      console.log( custom_block.classList );
     });
   })();
 
@@ -81,6 +84,30 @@
     input.on( 'change', function( e ) {
       console.log( 'Your text is', e.target.value );
     });
+  })();
+
+  // slide 6/1
+  (function() {
+    const btn_add_bar = $( '#add_bar' );
+    const btn_remove_bar = $( '#remove_bar' );
+    const btn_toggle_bar = $( '#toggle_bar' );
+    const custom_block = $( '#custom_bar' );
+
+    btn_add_bar.on( 'click', function( e ) {
+      custom_block.addClass( 'bar' );
+      console.log( custom_block.attr( 'class' ) );
+    });
+
+    btn_remove_bar.on( 'click', function( e ) {
+      custom_block.removeClass( 'bar' );
+      console.log( custom_block.attr( 'class' ) );
+    });
+
+    btn_toggle_bar.on( 'click', function( e ) {
+      custom_block.toggleClass( 'bar' );
+      console.log( custom_block.attr( 'class' ) );
+    });
+
   })();
 
 })();

@@ -157,7 +157,7 @@ input.addEventListener( 'change', function( e ) {
 							</p>
 
 							<p class="fragment fade-up" data-fragment-index="2">
-								Almost *everything*.
+								Almost <b>everything</b>.
 							</p>
 
 							<p class="fragment fade-up" data-fragment-index="3">
@@ -293,52 +293,55 @@ input.on( 'change', function( e ) {
 					</section>
 				</section>
 				<section>
-					<h2>
-						<a target="_blank" href="http://api.jquery.com/category/manipulation/">
-							Manipulating DOM with jQuery
-						</a>
-					</h2>
-				</section>
-				<section>
-						<h2>Manipulating classes</h2>
-						<button id="add_foo">I add .foo</button>
-						<button id="remove_foo">I remove .foo</button>
-						<button id="toggle_foo">I toggle .foo</button>
+					<section>
+						<h2>
+							<a target="_blank" href="http://api.jquery.com/category/manipulation/">
+								Manipulating DOM with jQuery
+							</a>
+						</h2>
+					</section>
+					<section>
+							<h2>Manipulating classes</h2>
+							<button id="add_bar">I add .foo</button>
+							<button id="remove_bar">I remove .foo</button>
+							<button id="toggle_bar">I toggle .foo</button>
 
-						<div id="custom" style="background-color: green;">Inspect me on the developer console!</div>
-						<pre><code data-trim data-noescape>
-const btn_add_foo = $( '#add_foo' );
-const btn_remove_foo = $( '#remove_foo' );
-const btn_toggle_foo = $( '#toggle_foo' );
-const custom_block = $( '#custom' );
+							<div id="custom_bar" style="background-color: green;">Inspect me on the developer console!</div>
+							<pre><code data-trim data-noescape>
+const btn_add_bar = $( '#add_bar' );
+const btn_remove_bar = $( '#remove_bar' );
+const btn_toggle_bar = $( '#toggle_bar' );
+const custom_block = $( '#custom_bar' );
 
-btn_add_foo.on( 'click', function( e ) {
-	custom_block.addClass( 'foo' );
+btn_add_bar.on( 'click', function( e ) {
+  custom_block.addClass( 'bar' );
 });
 
-btn_remove_foo.on( 'click', function( e ) {
-	custom_block.removeClass( 'foo' );
+btn_remove_bar.on( 'click', function( e ) {
+  custom_block.removeClass( 'bar' );
 });
 
-btn_toggle_foo.on( 'click', function( e ) {
-	custom_block.toggleClass( 'foo' );
+btn_toggle_bar.on( 'click', function( e ) {
+  custom_block.toggleClass( 'bar' );
 });
-						</code></pre>
-				</section>
+								</code></pre>
+
+						</section>
+					</section>
+				</div>
 			</div>
-		</div>
-		<script src="http://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+			<script src="http://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
+			<script src="lib/js/head.min.js"></script>
+			<script src="js/reveal.js"></script>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+			<script>
+				// More info https://github.com/hakimel/reveal.js#configuration
+				Reveal.initialize({
+					history: true,
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
+					// More info https://github.com/hakimel/reveal.js#dependencies
+					dependencies: [
+						{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
