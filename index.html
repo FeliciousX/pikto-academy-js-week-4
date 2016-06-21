@@ -185,23 +185,26 @@ btn_toggle_foo.addEventListener( 'click', function( e ) {
 });
 						</code></pre>
 					</section>
-					<section data-markdown>
-						<script type="text/template">
-							### What else?
+					<section>
+						<h3>What else?</h3>
+						<pre><code data-trim data-noescape>
+// you want to check if a class exist?
+node.classList.contains( 'foo' )
 
-							- You want to check if a class exist? Hmm...
-								- ```node.classList.contains( 'foo' )```
+// wait, what's the element's ID?
+node.id
 
-							- Wait, what's the element's ID? `node.id`
+// it's an input field? How do I get the value?
+node.value
 
-							- It's an input field? What's the value? `node.value`
+// how do I get data from that `data-foo="bar"` thingy? Ah..
+node.dataset.foo
 
-							- How do I get data from that `data-foo="bar"` thingy? Ah.. `node.dataset.foo`
+// how bout that random attribute `animal="dog"`? No worries..
+node.getAttribute( 'animal' )
 
-							- How bout that random attribute `animal="dog"`? No worries `node.getAttribute( 'animal' )`
-
-							- Can I change the styling directly without using a class? Sure `node.style.width = '100px'`
-						</script>
+// Can I change the styling directly without using a class? Sure!
+node.style.width = '100px'
 					</section>
 				</section>
 			</div>
