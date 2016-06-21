@@ -103,6 +103,12 @@ Can I change the styling directly without using a class? Sure `node.style.width 
 
 # 5. Querying DOM using jQuery
 
+Write less, do more.
+
+Before you use jQuery, you need to know what's the pros and cons.
+
+For all you know, [you might not need jQuery][12] at all...
+
 ---
 
 # 6. Manipulating DOM with jQuery
@@ -121,3 +127,4 @@ Can I change the styling directly without using a class? Sure `node.style.width 
 [10]: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName
 [11]: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagNameNS
 [12]: http://lucybain.com/blog/2014/attribute-vs-property/
+[13]: http://youmightnotneedjquery.com/
