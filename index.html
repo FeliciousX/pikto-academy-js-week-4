@@ -239,6 +239,7 @@ node.style.width = '100px'
 					</section>
 					<section>
 						<p>Using ID...</p>
+						<button id="bar">I am a unique button</button>
 						<pre><code data-trim data-noescape>
 const button = $( '#bar' );
 
@@ -246,6 +247,33 @@ button.on( 'click', function( e ) {
 	console.log( 'Hey', e.currentTarget );
 });
 						</code></pre>
+					</section>
+					<section>
+						<h2>Using Class...</h2>
+						<button class="bar">I am a classy button</button>
+						<pre><code data-trim data-noescape>
+const button = $( '.foo' );
+
+button.on( 'click', function( e ) {
+  console.log( 'Hey', e.currentTarget );
+});
+						</code></pre>
+					</section>
+					<section>
+						<h2>Using Attributes...</h2>
+						<input type="email" placeholder="I am an email input" />
+						<pre><code data-trim data-noescape>
+const input = $( '[type="email"]' );
+
+input.on( 'change', function( e ) {
+  console.log( 'Your email is', e.target.value );
+});
+						</code></pre>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Using Relationships...
+						</script>
 					</section>
 				</section>
 			</div>
