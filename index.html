@@ -210,7 +210,11 @@ node.style.width = '100px'
 				</section>
 				<section>
 					<section>
-						<h2>Write less, do more.</h2>
+						<h2>
+							<a target="_blank" href="http://jquery.com/">
+								Write less, do more.
+							</a>
+						</h2>
 					</section>
 					<section>
 						<h2>Querying DOM using jQuery</h2>
@@ -222,7 +226,7 @@ node.style.width = '100px'
 								As a Developer it's important to be aware of the choices you make and how does it impact you.
 							</li>
 							<li class="fragment fade-up" data-fragment-index="3">
-								Because for all you know, <a href="http://youmightnotneedjquery.com/">you might not need jQuery</a> at all :P
+								Because for all you know, <a target="_blank" href="http://youmightnotneedjquery.com/">you might not need jQuery</a> at all :P
 							</li>
 						</ul>
 					</section>
@@ -234,7 +238,7 @@ node.style.width = '100px'
 							<li>animations are easier</li>
 							<li>lots of built-in helpers</li>
 						</ul>
-						<p><a href="http://learn.jquery.com/performance/optimize-selectors/">Selector performance</a> is something to take note of.</p>
+						<p><a target="_blank" href="http://learn.jquery.com/performance/optimize-selectors/">Selector performance</a> is something to take note of.</p>
 						<p>Lets check out some code!</p>
 					</section>
 					<section>
@@ -266,15 +270,51 @@ button.on( 'click', function( e ) {
 const input = $( '[type="text"]' );
 
 input.on( 'change', function( e ) {
-  console.log( 'Your email is', e.target.value );
+  console.log( 'Your text is', e.target.value );
 });
 						</code></pre>
 					</section>
 					<section data-markdown>
 						<script type="text/template">
-							## Using Relationships...
+							## More stuff
+
+							- You need to understand DOM [traversing](http://api.jquery.com/category/traversing/)
+							- Advanced jQuery [selector](http://api.jquery.com/category/selectors/) stuff.
 						</script>
 					</section>
+				</section>
+				<section>
+					<h2>
+						<a target="_blank" href="http://api.jquery.com/category/manipulation/">
+							Manipulating DOM with jQuery
+						</a>
+					</h2>
+				</section>
+				<section>
+						<h2>Manipulating classes</h2>
+						<button id="add_foo">I add .foo</button>
+						<button id="remove_foo">I remove .foo</button>
+						<button id="toggle_foo">I toggle .foo</button>
+
+						<div id="custom" style="background-color: green;">Inspect me on the developer console!</div>
+						<pre><code data-trim data-noescape>
+const btn_add_foo = $( '#add_foo' );
+const btn_remove_foo = $( '#remove_foo' );
+const btn_toggle_foo = $( '#toggle_foo' );
+const custom_block = $( '#custom' );
+
+btn_add_foo.on( 'click', function( e ) {
+	custom_block.addClass( 'foo' );
+});
+
+btn_remove_foo.on( 'click', function( e ) {
+	custom_block.removeClass( 'foo' );
+});
+
+btn_toggle_foo.on( 'click', function( e ) {
+	custom_block.toggleClass( 'foo' );
+});
+						</code></pre>
 				</section>
 			</div>
 		</div>
