@@ -110,7 +110,7 @@
 						<pre><code data-trim data-noescape>
 const button = document.getElementById( 'foo' );
 
-button.addEventListener( 'click', function( e ) {
+button.addEventListener( 'click', e => {
   console.log( 'Hey', e.currentTarget );
 });
 						</code></pre>
@@ -121,7 +121,7 @@ button.addEventListener( 'click', function( e ) {
 						<pre><code data-trim data-noescape>
 const button = document.querySelector( '.foo' );
 
-button.addEventListener( 'click', function( e ) {
+button.addEventListener( 'click', e => {
   console.log( 'Hey', e.currentTarget );
 });
 						</code></pre>
@@ -132,7 +132,7 @@ button.addEventListener( 'click', function( e ) {
 						<pre><code data-trim data-noescape>
 const input = document.querySelector( '[type="email"]' );
 
-input.addEventListener( 'change', function( e ) {
+input.addEventListener( 'change', e => {
   console.log( 'Your email is', e.target.value );
 });
 						</code></pre>
@@ -185,15 +185,15 @@ const btn_remove_foo = document.querySelector( '#remove_foo' );
 const btn_toggle_foo = document.querySelector( '#toggle_foo' );
 const custom_block = document.getElementById( 'custom' );
 
-btn_add_foo.addEventListener( 'click', function( e ) {
+btn_add_foo.addEventListener( 'click', e => {
 	custom_block.classList.add( 'foo' );
 });
 
-btn_remove_foo.addEventListener( 'click', function( e ) {
+btn_remove_foo.addEventListener( 'click', e => {
 	custom_block.classList.remove( 'foo' );
 });
 
-btn_toggle_foo.addEventListener( 'click', function( e ) {
+btn_toggle_foo.addEventListener( 'click', e => {
 	custom_block.classList.toggle( 'foo' );
 });
 						</code></pre>
@@ -260,7 +260,7 @@ node.style.width = '100px'
 						<pre><code data-trim data-noescape>
 const button = $( '#bar' );
 
-button.on( 'click', function( e ) {
+button.on( 'click', e => {
 	console.log( 'Hey', e.currentTarget );
 });
 						</code></pre>
@@ -271,7 +271,7 @@ button.on( 'click', function( e ) {
 						<pre><code data-trim data-noescape>
 const button = $( '.bar' );
 
-button.on( 'click', function( e ) {
+button.on( 'click', e => {
   console.log( 'Hey', e.currentTarget );
 });
 						</code></pre>
@@ -282,7 +282,7 @@ button.on( 'click', function( e ) {
 						<pre><code data-trim data-noescape>
 const input = $( '[type="text"]' );
 
-input.on( 'change', function( e ) {
+input.on( 'change', e => {
   console.log( 'Your text is', e.target.value );
 });
 						</code></pre>
@@ -317,15 +317,15 @@ const btn_remove_bar = $( '#remove_bar' );
 const btn_toggle_bar = $( '#toggle_bar' );
 const custom_block = $( '#custom_bar' );
 
-btn_add_bar.on( 'click', function( e ) {
+btn_add_bar.on( 'click', e => {
   custom_block.addClass( 'bar' );
 });
 
-btn_remove_bar.on( 'click', function( e ) {
+btn_remove_bar.on( 'click', e => {
   custom_block.removeClass( 'bar' );
 });
 
-btn_toggle_bar.on( 'click', function( e ) {
+btn_toggle_bar.on( 'click', e => {
   custom_block.toggleClass( 'bar' );
 });
 								</code></pre>
@@ -344,15 +344,15 @@ const btn_hide = $( '#hide_bar' );
 const btn_toggle_bar = $( '#toggle_show_bar' );
 const custom_block = $( '#bar_bar' );
 
-btn_show.on( 'click', function( e ) {
+btn_show.on( 'click', e => {
   custom_block.show();
 });
 
-btn_hide.on( 'click', function( e ) {
+btn_hide.on( 'click', e => {
   custom_block.hide();
 });
 
-btn_toggle_bar.on( 'click', function( e ) {
+btn_toggle_bar.on( 'click', e => {
   custom_block.toggle();
 });
 								</code></pre>
@@ -375,9 +375,6 @@ btn_contract.on( 'click', e => {
   box.animate({ width: '100px' }, 1000 );
 });
 							</code></pre>
-						</section>
-						<section>
-							<h2>Manipulating DOM with jQuery</h2>
 						</section>
 					</section>
 					<section>
