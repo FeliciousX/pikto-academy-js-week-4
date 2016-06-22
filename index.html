@@ -358,7 +358,7 @@ btn_toggle_bar.on( 'click', e => {
 								</code></pre>
 						</section>
 						<section>
-							<h2>Animation</h2>
+							<h2><a target="_blank" href="http://api.jquery.com/animate/">Animation</a></h2>
 							<div id="box" style="height:50px; width:100px; background-color:red;"></div>
 							<button id="expand">Expand</button>
 							<button id="contract">Contract</button>
@@ -375,6 +375,23 @@ btn_contract.on( 'click', e => {
   box.animate({ width: '100px' }, 1000 );
 });
 							</code></pre>
+						</section>
+						<section>
+							<h2>Chaining</h2>
+							<p>jQuery allows chaining because almost every function will return a jQuery object</p>
+							<pre><code data-trim data-noescape>
+// No chaining
+$("#menu").fadeIn("fast");
+$("#menu").addClass("active");
+$("#menu").css("marginRight", "10px");
+
+// chaining
+$("#menu").fadeIn("fast")
+.addClass("active")
+.css("marginRight", "10px");
+							</code></pre>
+
+							<p>Read more about it <a target="_blank" href="http://tobiasahlin.com/blog/quick-guide-chaining-in-jquery/">here</a></p>
 						</section>
 					</section>
 					<section>
