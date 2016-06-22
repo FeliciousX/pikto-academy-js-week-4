@@ -110,6 +110,7 @@
 
   })();
 
+  // slide 6/2
   (function() {
     const btn_show = $( '#show_bar' );
     const btn_hide = $( '#hide_bar' );
@@ -126,6 +127,21 @@
 
     btn_toggle_bar.on( 'click', function( e ) {
       custom_block.toggle();
+    });
+  })();
+
+  // slide 6/3
+  (function() {
+    const box = $( '#box' );
+    const btn_expand = $( '#expand' );
+    const btn_contract = $( '#contract' );
+
+    btn_expand.on( 'click', e => {
+      box.animate({ width: '800px' }, 1000 );
+    });
+
+    btn_contract.on( 'click', e => {
+      box.animate({ width: '100px' }, 1000 );
     });
   })();
 

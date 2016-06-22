@@ -356,7 +356,25 @@ btn_toggle_bar.on( 'click', function( e ) {
   custom_block.toggle();
 });
 								</code></pre>
+						</section>
+						<section>
+							<h2>Manipulating DOM</h2>
+							<div id="box" style="height:50px; width:100px; background-color:red;"></div>
+							<button id="expand">Expand</button>
+							<button id="contract">Contract</button>
+							<pre><code data-trim data-noescape>
+const box = $( '#box' );
+const btn_expand = $( '#expand' );
+const btn_contract = $( '#contract' );
 
+btn_expand.on( 'click', e => {
+  box.animate({ width: '800px' }, 1000 );
+});
+
+btn_contract.on( 'click', e => {
+  box.animate({ width: '100px' }, 1000 );
+});
+							</code></pre>
 						</section>
 					</section>
 					<section>
